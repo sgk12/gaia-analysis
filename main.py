@@ -27,7 +27,6 @@ results_diffs = Table.read(filename1)
 diffs_df = results_diffs.to_pandas()
 
 diffs_df = diffs_df.dropna()
-print(diffs_df.describe(), "hi")
 
 diffs_df = diffs_df.sort_values(by=['bp_g'])
 
@@ -38,7 +37,6 @@ arrs = np.array_split(split_copy, 4)
 
 for a in arrs:
     a = a.sort_values(by=['bp_g'])
-    print(a.head())
 
 fig, axs = plt.subplots(2, 3)
 fig.suptitle('BP-G vs. G-RP Magnitudes in GAIA Catalog of Nearby Stars')
